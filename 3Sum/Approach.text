@@ -1,0 +1,21 @@
+## Approach:
+1. Begin by sorting the input array in ascending order, which takes O(n log n) time.
+2. Initialize a set to store unique triplets and an output vector to hold the final result.
+3. Iterate through the sorted array using a variable 'i,' starting from index 0.
+4. For each 'i,' initialize two pointers, 'j' and 'k.' Set 'j' to i+1 and 'k' to the end of the array.
+5. Enter a while loop to find triplets where the sum of nums[i], nums[j], and nums[k] equals 0.
+   - If the sum is 0, add the triplet to the set, and increment 'j' while decrementing 'k' to explore other possibilities.
+   - If the sum is less than 0, increment 'j' to move towards a larger sum.
+   - If the sum is greater than 0, decrement 'k' to decrease the sum.
+6. After exiting the while loop, iterate through the set of unique triplets and add each triplet to the output vector.
+7. Return the output vector.
+
+
+
+## Time Complexity and Space Complexity:
+- Time complexity: O(n^2 log n)
+  - Sorting the array takes O(n log n) time.
+  - The nested loop takes O(n^2) time, as we explore all possible triplets.
+  - So, the overall time complexity is O(n^2 log n) due to the sorting operation.
+- Space complexity: O(n)
+  - We use a HashSet to store unique triplets, and its space complexity is O(n) because, in the worst case, all elements in the array may form unique triplets.
