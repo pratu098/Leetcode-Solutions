@@ -1,0 +1,20 @@
+Approach:
+- Sort the input array 'nums' in ascending order using Arrays.sort(nums).
+- Initialize variables 'v1' and 'v2' representing the sums of the smallest and largest three elements, respectively.
+- If the target is greater than 'v2,' return 'v2.' If the target is less than 'v1,' return 'v1.'
+- Initialize 'res' to 'v1' as the default closest sum.
+- Iterate through the array using a loop starting from index 0 up to 'n - 2,' where 'n' is the length of 'nums.'
+- Within the loop, handle duplicates by checking if 'nums[i]' is equal to 'nums[i - 1]' and continue to the next iteration if true.
+- Initialize two pointers, 'j' and 'k,' where 'j' starts at 'i + 1,' and 'k' starts at 'n - 1.'
+- Enter a while loop to find the triplet sum closest to the target:
+   - Calculate the current sum, 'nums[i] + nums[j] + nums[k].'
+   - If the sum is equal to the target, return the sum.
+   - Update 'res' if the absolute difference between the target and the current sum is smaller than the absolute difference between the target and 'res.'
+   - Adjust 'j' and 'k' based on whether the current sum is less than or greater than the target.
+- After the loop, return the final result, 'res.'
+
+Time Complexity:
+- O(n^2) due to the nested loop where 'n' is the length of the array.
+
+Space Complexity:
+- O(1) as the algorithm uses a constant amount of extra space.
