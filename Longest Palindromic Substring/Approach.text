@@ -1,0 +1,15 @@
+Approach:
+-> Create a new StringBuilder 'sb' to build a modified string 'T' with special characters ('^', '#', and '$') inserted between each character of the input string 's.'
+-> Initialize variables 'C' and 'R' to keep track of the center and rightmost boundary of the current palindrome.
+-> Initialize an array 'P' to store the length of palindromes centered at each position in 'T.'
+-> Iterate through the modified string 'T' using a loop from index 1 to 'n-2,' where 'n' is the length of 'T.'
+   - Calculate 'P[i]' based on the symmetric property of palindromes.
+   - Expand the palindrome centered at position 'i' and update 'C' and 'R' accordingly.
+-> After the loop, find the maximum palindrome length and its center index in the 'P' array.
+-> Return the longest palindrome substring from the original string 's' based on the calculated center index and palindrome length.
+
+Time Complexity:
+- O(n^2) as the algorithm explores each character in 'T' and expands the palindrome around it.
+
+Space Complexity:
+- O(n) for the modified string 'T' and the palindrome length array 'P.'
