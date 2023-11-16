@@ -1,0 +1,16 @@
+Approach:
+1. Create a StringBuilder 'sb' to build the result string.
+2. Iterate through each binary string in the 'nums' array.
+3. For each binary string, check the character at the current index 'i.'
+   - If the character is '0,' append '1' to 'sb.'
+   - If the character is '1,' append '0' to 'sb.'
+4. Return the result string constructed from 'sb.'
+
+Explanation:
+The goal is to find a binary string that is different from each binary string in the 'nums' array at the corresponding positions. This is achieved by iterating through the characters at the same index in each binary string and flipping them (changing '0' to '1' and vice versa).
+
+Time Complexity:
+- O(n * m), where 'n' is the number of binary strings in the 'nums' array and 'm' is the length of each binary string.
+
+Space Complexity:
+- O(m), where 'm' is the length of each binary string, as the StringBuilder 'sb' is used to construct the result string.
