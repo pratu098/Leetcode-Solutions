@@ -1,0 +1,13 @@
+Approach:
+- Sort the array 'nums' in ascending order using Arrays.sort(nums).
+- Initialize a variable 'minMaxSum' to store the minimum maximum pair sum.
+- Iterate through the first half of the sorted array (up to 'nums.length / 2').
+   - For each pair of elements at indices 'i' and 'nums.length - 1 - i,' calculate the sum.
+   - Update 'minMaxSum' with the maximum of its current value and the calculated sum.
+- Return the final 'minMaxSum' as the result.
+
+Time Complexity:
+- O(n log n), where 'n' is the length of the array. The dominant factor is the sorting operation.
+
+Space Complexity:
+- O(1) as the algorithm uses a constant amount of extra space.
