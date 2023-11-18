@@ -1,0 +1,20 @@
+Approach:
+1. Sort the array 'nums' in ascending order using Arrays.sort(nums).
+2. Initialize two pointers, 'i' and 'j,' both initially pointing to the beginning of the array.
+3. Initialize a variable 'sum' to keep track of the sum of elements in the current subarray.
+4. Initialize a variable 'maxLength' to store the maximum length of a subarray with a frequency that can be achieved by at most 'k' moves.
+5. Iterate through the array with 'i' representing the end of the subarray.
+   - Add the current element 'nums[i]' to the 'sum.'
+   - Check if the condition ((i - j + 1) * nums[i] - sum) > k is violated.
+   - If violated, subtract 'nums[j]' from 'sum' and increment 'j' until the condition is satisfied.
+   - Update 'maxLength' with the maximum length of the subarray encountered so far.
+6. Return the final 'maxLength' as the result.
+
+Explanation:
+The goal is to find the maximum length of a subarray such that the frequency of the most frequent element in the subarray can be achieved by performing at most 'k' moves (changing elements). This is achieved by maintaining a sliding window and adjusting the window size based on the condition given in the while loop.
+
+Time Complexity:
+- O(n log n) due to the sorting operation.
+
+Space Complexity:
+- O(1) as the algorithm uses a constant amount of extra space.
