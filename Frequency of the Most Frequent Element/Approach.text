@@ -9,10 +9,6 @@ Approach:
    - If violated, subtract 'nums[j]' from 'sum' and increment 'j' until the condition is satisfied.
    - Update 'maxLength' with the maximum length of the subarray encountered so far.
 6. Return the final 'maxLength' as the result.
-
-Explanation:
-The goal is to find the maximum length of a subarray such that the frequency of the most frequent element in the subarray can be achieved by performing at most 'k' moves (changing elements). This is achieved by maintaining a sliding window and adjusting the window size based on the condition given in the while loop.
-
 Time Complexity:
 - O(n log n) due to the sorting operation.
 
