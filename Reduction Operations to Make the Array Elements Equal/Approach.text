@@ -1,0 +1,13 @@
+Approach:
+- Sort the array 'nums' in ascending order using Arrays.sort(nums).
+- Initialize variables 'si' to store the length of 'nums' and 'ans' to store the total number of operations needed to reduce all elements to the minimum value.
+- Iterate through the sorted array from the end (starting at index 'nums.length - 1').
+   - Check if the element at index 'i' is different from the element at index 'i-1.'
+   - If true, add the difference between 'si' and 'i' to 'ans.'
+- Return the final 'ans' as the result.
+
+Time Complexity:
+- O(n log n) due to the sorting operation.
+
+Space Complexity:
+- O(1) as the algorithm uses a constant amount of extra space.
