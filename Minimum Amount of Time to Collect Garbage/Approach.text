@@ -1,0 +1,20 @@
+Approach:
+- Initialize variables 'totalMinutes' and 'currentTravelTime' to keep track of the total minutes needed for garbage collection and the current travel time, respectively.
+- Add the initial minutes required to collect garbage at the first house to 'totalMinutes.'
+- Create a list 'lastGarbageIndices' to keep track of the last occurrence index for each type of garbage (M, P, G). Initialize it with values -1 to represent that no garbage of each type has been encountered yet.
+- Iterate through each house starting from the second house.
+   - Add the minutes required to collect garbage at the current house to 'totalMinutes.'
+   - Update the indices of the last occurrence of each type of garbage in 'lastGarbageIndices.'
+- Iterate through each travel segment.
+   - Add the current travel time to 'currentTravelTime.'
+   - Check if a garbage truck is at the corresponding house for each type of garbage. If so, add the current travel time to 'totalMinutes.'
+- Return the final 'totalMinutes' as the result.
+
+Explanation:
+The goal is to calculate the total minutes needed for garbage collection based on the given array of garbage types at each house and travel times between houses. The algorithm tracks the last occurrence index for each type of garbage and calculates the total minutes by considering the time spent collecting garbage at each house and the travel time for each travel segment.
+
+Time Complexity:
+- O(N + M), where 'N' is the total number of houses and 'M' is the total number of travel segments. The algorithm iterates through each house and each travel segment.
+
+Space Complexity:
+- O(1) as the algorithm uses a constant amount of extra space. The size of 'lastGarbageIndices' is fixed, independent of the input size.
