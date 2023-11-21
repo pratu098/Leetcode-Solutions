@@ -1,0 +1,14 @@
+Approach:
+- Initialize a constant 'mod' as 1000000007.
+- Iterate through the array 'nums' and transform each element by subtracting its reverse using the 'reverse' function.
+- Sort the modified array 'nums.'
+- Initialize a variable 'res' to store the count of nice pairs.
+- Iterate through the sorted array and count the number of consecutive equal elements, calculating the number of pairs for each group.
+- Update 'res' with the sum of pairs for each group.
+- Return the final count of nice pairs.
+
+Time Complexity:
+- O(N log N), where 'N' is the length of the array. The dominant factor is the sorting operation.
+
+Space Complexity:
+- O(1) as the algorithm uses a constant amount of extra space. The size of the array 'nums' is modified in-place, and the extra space used is not dependent on the input size.
