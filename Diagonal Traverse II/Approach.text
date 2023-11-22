@@ -1,0 +1,15 @@
+Approach:
+- Initialize variables 'm' for the number of lists in 'nums,' 'maxSum' to track the maximum diagonal sum, 'size' to store the total number of elements in 'nums,' and 'index' to keep track of the current index in the result array.
+- Create an array of ArrayLists 'map' to store elements based on their diagonal sums.
+- Iterate through each list in 'nums' and populate the 'map' array with elements based on their diagonal sums.
+- Initialize an array 'res' with a size equal to 'size' to store the final result.
+- Iterate through the 'map' array from 0 to 'maxSum.'
+   - For each diagonal sum, retrieve the corresponding list from 'map[i].'
+   - Iterate through the list in reverse order and add its elements to the 'res' array.
+- Return the final 'res' array.
+
+Time Complexity:
+- O(N), where 'N' is the total number of elements in all lists of 'nums.' The algorithm iterates through each element in 'nums' to populate the 'map' array and construct the result array.
+
+Space Complexity:
+- O(N), where 'N' is the total number of elements in all lists of 'nums.' The algorithm uses additional space to store the 'map' array and the 'res' array. The size of the 'map' array is determined by the maximum diagonal sum, which is at most the sum of the number of rows and columns in 'nums.'
