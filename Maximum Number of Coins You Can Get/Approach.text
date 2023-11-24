@@ -1,0 +1,12 @@
+Approach:
+- Sort the array 'piles' in ascending order using Arrays.sort(piles).
+- Initialize a variable 'ans' to store the maximum number of coins that can be obtained.
+- Iterate through the sorted array, starting from the index 'n / 3' and incrementing the index by 2 in each step.
+- Add the number of coins at the current index to 'ans.'
+- Return the final 'ans' as the result.
+
+Time Complexity:
+- O(N log N), where 'N' is the length of the array. The algorithm sorts the array, and the dominant factor is the sorting operation.
+
+Space Complexity:
+- O(1) as the algorithm uses a constant amount of extra space. The sorting is done in-place, and the only additional variable used is 'ans.'
