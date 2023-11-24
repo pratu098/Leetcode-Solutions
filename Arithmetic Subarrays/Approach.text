@@ -1,0 +1,13 @@
+Approach:
+- Implement a helper function 'check' that takes an array, sorts it, and checks if the elements form an arithmetic sequence with a consistent difference.
+- In the main function 'checkArithmeticSubarrays,' iterate through the given range represented by 'l' and 'r.'
+- For each range, create a subarray 'arr' from 'nums' based on the given indices.
+- Use the 'check' function to determine if the subarray 'arr' forms an arithmetic sequence.
+- Append the result to the 'ans' list.
+- Return the 'ans' list containing Boolean values indicating whether each subarray is an arithmetic sequence.
+
+Time Complexity:
+- O(Q * N log N), where 'Q' is the number of queries (length of 'l' or 'r') and 'N' is the maximum size of a subarray. The algorithm iterates through each subarray and sorts it, and the dominant factor is the sorting operation.
+
+Space Complexity:
+- O(N), where 'N' is the maximum size of a subarray. The algorithm uses space to store the 'arr' subarray.
