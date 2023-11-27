@@ -1,0 +1,14 @@
+Approach:
+- Initialize an array 'curPos' to store the number of ways the knight can be at each position on the phone pad after a certain number of jumps.
+- Loop through the number of jumps required (from 2 to 'n').
+- Create a new array 'newPos' to store the updated positions after each jump.
+- Calculate the new positions based on the valid knight moves, considering the adjacency of positions on the phone pad.
+- Update the 'curPos' array with the values from 'newPos' for the next iteration.
+- Calculate the total count of distinct phone numbers by summing up the values in the 'curPos' array.
+- Return the total count as the result.
+
+Time Complexity:
+- O(N), where 'N' is the number of jumps. The algorithm iterates through the number of jumps and performs constant-time operations for each jump.
+
+Space Complexity:
+- O(1) as the algorithm uses a constant amount of extra space. The arrays 'curPos' and 'newPos' have a fixed size (10 elements), independent of the input size.
