@@ -1,0 +1,15 @@
+Approach:
+- Initialize variables 'zero,' 'one,' and 'two' to represent the number of ways to reach the current position based on the previous corridor configuration.
+   - 'zero': Number of ways to reach the current position without any snakes ('S').
+   - 'one': Number of ways to reach the current position with one snake ('S') at the previous position.
+   - 'two': Number of ways to reach the current position with two snakes ('S') at the previous position.
+- Iterate through each character in the 'corridor' string.
+- If the current character is 'S,' update the variables 'zero,' 'one,' and 'two' based on the previous values.
+- If the current character is 'H,' update 'two' with the sum of 'two' and 'zero' modulo MOD.
+- Return the final value of 'zero' as the result.
+
+Time Complexity:
+- O(N), where 'N' is the length of the 'corridor' string. The algorithm iterates through each character in the string.
+
+Space Complexity:
+- O(1) as the algorithm uses a constant amount of extra space. The variables 'zero,' 'one,' and 'two' are used to track the counts, and their size is independent of the input size.
