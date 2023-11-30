@@ -1,0 +1,15 @@
+Approach:
+1. Initialize variables 'multiplier' and 'res' to keep track of the sign of the operation and the result.
+   - 'multiplier': Alternates between 1 and -1 to control the sign of the operation.
+   - 'res': Accumulates the total minimum one-bit operations.
+2. Iterate while 'n' is greater than 0.
+   a. Update 'res' by performing bitwise XOR between 'n' and the previous value of 'n' multiplied by 'multiplier.'
+   b. Toggle the sign of 'multiplier' by multiplying it by -1.
+   c. Update 'n' by performing bitwise AND between 'n' and 'n - 1' (turning off the rightmost set bit).
+3. Return the absolute value of 'res' as the result.
+
+Time Complexity:
+- O(log N), where 'N' is the value of 'n.' The algorithm iterates through the bits of 'n' in the worst case.
+
+Space Complexity:
+- O(1) as the algorithm uses a constant amount of extra space. The variables 'multiplier' and 'res' are independent of the input size.
