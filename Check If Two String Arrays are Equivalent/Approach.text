@@ -1,0 +1,12 @@
+Approach:
+- Initialize two StringBuilder objects, 'str1' and 'str2,' to concatenate the strings in 'word1' and 'word2,' respectively.
+- Iterate through each string in 'word1' and append its characters to 'str1.'
+- Iterate through each string in 'word2' and append its characters to 'str2.'
+- Convert 'str1' and 'str2' to strings 's1' and 's2,' respectively.
+- Check if 's1' is equal to 's2.' If true, return true; otherwise, return false.
+
+Time Complexity:
+- O(M + N), where 'M' is the total length of the strings in 'word1' and 'N' is the total length of the strings in 'word2.' The algorithm iterates through each character in the input strings.
+
+Space Complexity:
+- O(M + N), where 'M' is the total length of the strings in 'word1' and 'N' is the total length of the strings in 'word2.' The algorithm uses StringBuilder to store the concatenated strings, and the space complexity is proportional to the total length of the input strings.
