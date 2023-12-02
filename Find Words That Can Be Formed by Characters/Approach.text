@@ -1,0 +1,17 @@
+Approach:
+1. Initialize an array 'counts' of size 26 to represent the count of each character in the 'chars' string.
+2. Iterate through each character in 'chars' and update the counts in the 'counts' array.
+3. Initialize a variable 'res' to 0 to store the total length of valid words.
+4. Iterate through each word in 'words.'
+5. Check if the current word can be formed using the characters in 'counts' by calling the 'canForm' function.
+   - Inside 'canForm,' initialize an array 'c' to represent the count of characters in the current word.
+   - Iterate through each character in the word, update the counts in 'c,' and check if the count exceeds the available count in 'counts.'
+   - If any character count exceeds the available count, return false; otherwise, return true.
+6. If the current word can be formed, add its length to 'res.'
+7. Return 'res' as the result.
+
+Time Complexity:
+- O(C + W), where 'C' is the length of the 'chars' string, and 'W' is the total length of the words in the 'words' array. The algorithm iterates through each character in 'chars' and each character in each word.
+
+Space Complexity:
+- O(1) as the algorithm uses a constant amount of extra space. The arrays 'counts' and 'c' have fixed sizes (26 elements), independent of the input size.
