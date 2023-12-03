@@ -1,0 +1,15 @@
+Approach:
+1. Implement a helper function 'toTime' that calculates the time to travel from one point to another based on the absolute differences in x and y coordinates.
+2. Initialize a variable 'time' to 0 to represent the total time needed to visit all points.
+3. Iterate through the 'points' array starting from the second point (index 1).
+4. For each pair of consecutive points, update 'time' by adding the time calculated using the 'toTime' function.
+5. Return 'time' as the result.
+
+Explanation:
+The goal is to find the minimum time needed to visit all points in the 'points' array. The algorithm iterates through the array, calculates the time to travel between consecutive points using the 'toTime' function, and accumulates the total time.
+
+Time Complexity:
+- O(N), where 'N' is the number of points. The algorithm iterates through each pair of consecutive points.
+
+Space Complexity:
+- O(1) as the algorithm uses a constant amount of extra space. The variables 'time' and 'xDiff'/'yDiff' are independent of the input size.
