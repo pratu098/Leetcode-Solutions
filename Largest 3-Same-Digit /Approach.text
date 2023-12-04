@@ -1,0 +1,17 @@
+Approach:
+1. Initialize an empty string 'ans' to store the largest good integer found.
+2. Iterate through the characters of the input string 'num' starting from the third character (index 2).
+3. Check if the current character and its two preceding characters are equal (form a good integer).
+4. If the condition is met, compare the substring of 'num' from the current index to the next two characters with the current 'ans.'
+5. If the substring is lexicographically larger than the current 'ans,' update 'ans' with the substring.
+6. After the iteration, 'ans' will contain the lexicographically largest good integer found.
+7. Return 'ans' as the result.
+
+Explanation:
+The goal is to find the lexicographically largest good integer in the input string 'num.' The algorithm iterates through the characters of 'num,' checks for good integers, and updates the answer if a larger good integer is found.
+
+Time Complexity:
+- O(N), where 'N' is the length of the input string 'num.' The algorithm iterates through each character of the string.
+
+Space Complexity:
+- O(1) as the algorithm uses a constant amount of extra space. The variable 'ans' stores the largest good integer, and its size is independent of the input size.
