@@ -1,0 +1,13 @@
+Approach:
+1. Base case: If 'n' is 1, return 0 as there are no matches.
+2. If 'n' is even, return 'n/2 + numberOfMatches(n/2)' since half of the teams will be eliminated, and the number of matches will be added recursively for the remaining teams.
+3. If 'n' is odd, return '(n-1)/2 + numberOfMatches((n-1)/2 + 1)' since one team will get a bye, and the number of matches will be added recursively for the remaining teams.
+
+Explanation:
+The goal is to find the total number of matches required to determine the champion in a knockout tournament with 'n' teams. The algorithm uses recursive calls to calculate the number of matches needed based on the given conditions.
+
+Time Complexity:
+- O(log N), where 'N' is the input 'n.' The algorithm recursively divides 'n' by 2 in each call, and the number of recursive calls is logarithmic.
+
+Space Complexity:
+- O(log N), where 'N' is the input 'n.' The space complexity is proportional to the depth of the recursion.
