@@ -1,0 +1,14 @@
+Approach:
+1. Iterate through the characters of the input string 'num' from right to left (starting from the least significant digit).
+2. For each character, check if its numeric value is odd (i.e., divisible by 2 with a remainder of 1).
+3. If an odd digit is found, return the substring of 'num' from the beginning to the current index (inclusive).
+4. If no odd digit is found, return an empty string as there is no valid odd number.
+
+Explanation:
+The goal is to find the largest odd number by iterating through the digits of the input string 'num' from right to left. Once the first odd digit is encountered, the algorithm returns the substring up to that position.
+
+Time Complexity:
+- O(N), where 'N' is the length of the input string 'num.' The algorithm iterates through each character of the string.
+
+Space Complexity:
+- O(1) as the algorithm uses a constant amount of extra space. The substring returned is a view into the original string, and its size is independent of the input size.
