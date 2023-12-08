@@ -1,0 +1,18 @@
+Approach:
+1. Start with an empty result string to store the final string representation of the binary tree.
+2. Perform a preorder traversal of the binary tree.
+3. For each visited node:
+   - Append the node's value to the result.
+   - Check if the node has a left child or a right child.
+   - If a left child is present, append "(" to the result, recursively process the left child, and append ")".
+   - If a right child is present, append "(" to the result, recursively process the right child, and append ")".
+4. Return the final result string.
+
+Explanation:
+The algorithm uses a recursive preorder traversal to generate the string representation of the binary tree. It appends each node's value and adds parentheses for left and right children as needed. The result string is built during the traversal.
+
+Time Complexity:
+- O(N), where 'N' is the number of nodes in the binary tree. The algorithm visits each node exactly once during the preorder traversal.
+
+Space Complexity:
+- O(H), where 'H' is the height of the binary tree. The space complexity is determined by the maximum depth of the recursive call stack. In the worst case, the recursion depth is equal to the height of the tree.
