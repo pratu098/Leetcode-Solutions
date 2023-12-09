@@ -1,0 +1,17 @@
+Approach:
+1. Initialize a list 'ans' to store the result of the inorder traversal.
+2. Perform an inorder traversal of the binary tree using a recursive function.
+3. For each visited node:
+   - Recursively traverse the left subtree.
+   - Add the node's value to the 'ans' list.
+   - Recursively traverse the right subtree.
+4. Return the 'ans' list as the result.
+
+Explanation:
+The algorithm uses a recursive approach to perform an inorder traversal of the binary tree. The inorder traversal visits nodes in the order left subtree, current node, right subtree, resulting in a sorted list of values.
+
+Time Complexity:
+- O(N), where 'N' is the number of nodes in the binary tree. The algorithm visits each node exactly once during the inorder traversal.
+
+Space Complexity:
+- O(H), where 'H' is the height of the binary tree. The space complexity is determined by the maximum depth of the recursive call stack. In the worst case, the recursion depth is equal to the height of the tree.
