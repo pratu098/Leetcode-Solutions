@@ -1,0 +1,14 @@
+Approach:
+1. Initialize a new matrix 'res' with dimensions 'matrix[0].length' by 'matrix.length' to store the transposed matrix.
+2. Iterate through each element in the original matrix using nested loops.
+3. For each element at row 'r' and column 'c' in the original matrix, assign the value to 'res' at row 'c' and column 'r' in the transposed matrix.
+4. Return the transposed matrix 'res' as the result.
+
+Explanation:
+The algorithm transposes the given matrix by swapping the rows and columns. It uses nested loops to iterate through each element and assigns the transposed value to the corresponding position in the new matrix.
+
+Time Complexity:
+- O(M * N), where 'M' is the number of rows and 'N' is the number of columns in the original matrix. The algorithm iterates through each element once.
+
+Space Complexity:
+- O(M * N), as the algorithm creates a new matrix of dimensions 'matrix[0].length' by 'matrix.length' to store the transposed matrix.
