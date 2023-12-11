@@ -1,0 +1,19 @@
+Approach:
+1. Initialize variables 'size' to store the length of the input array 'arr', 'qtr' to store one-fourth of the size, 'cnt' to track the current count of consecutive identical elements, and 'p' to store the previous element.
+2. Iterate through the array 'arr' starting from index 1.
+3. For each element, check if it is equal to the previous element 'p':
+   - If equal, increment the count 'cnt'.
+   - If not equal, reset the count 'cnt' to 1.
+4. Check if the count 'cnt' is greater than one-fourth of the size 'qtr':
+   - If true, return the current element as it is the special integer.
+5. Update the previous element 'p' with the current element.
+6. If no special integer is found during the iteration, return the last element as the special integer.
+
+Explanation:
+The algorithm finds the special integer in the array by iterating through the elements and maintaining a count of consecutive identical elements. It returns the element that appears more than one-fourth of the array size.
+
+Time Complexity:
+- O(N), where 'N' is the size of the input array 'arr.' The algorithm iterates through each element once.
+
+Space Complexity:
+- O(1) as the algorithm uses a constant amount of extra space. The variables 'size,' 'qtr,' 'cnt,' and 'p' are independent of the input size.
