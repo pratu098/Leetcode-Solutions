@@ -1,0 +1,16 @@
+Approach:
+1. Initialize two variables, 'max1' and 'max2,' to track the two largest elements in the array. Initialize them with the minimum integer value.
+2. Iterate through each element 'num' in the array.
+3. Update 'max1' and 'max2' based on the comparison with the current element:
+   - If 'num' is greater than or equal to 'max1,' update 'max2' to the current value of 'max1,' and update 'max1' to 'num.'
+   - If 'num' is greater than 'max2' but less than 'max1,' update 'max2' to 'num.'
+4. After the iteration, calculate and return the product of (max1 - 1) and (max2 - 1).
+
+Explanation:
+The algorithm finds the two largest elements in the array by iterating through each element. It uses 'max1' and 'max2' to keep track of the largest and second-largest elements. The final result is the product of (max1 - 1) and (max2 - 1).
+
+Time Complexity:
+- O(N), where 'N' is the size of the input array 'nums.' The algorithm iterates through each element once.
+
+Space Complexity:
+- O(1) as the algorithm uses a constant amount of extra space. The variables 'max1' and 'max2' are independent of the input size.
