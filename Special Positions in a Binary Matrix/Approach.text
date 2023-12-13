@@ -1,0 +1,16 @@
+Approach:
+1. Initialize a variable 'specials' to count the number of special positions in the matrix.
+2. Iterate through each row of the matrix using a loop.
+3. For each row, check if there is exactly one '1' in the row and store its index. If there is more than one or none, return -1.
+4. If a valid index is found, check the corresponding column for the presence of '1' in other rows. If found, return false.
+5. If the row and column checks pass for a row, increment the 'specials' count.
+6. Return the final count of special positions.
+
+Explanation:
+The algorithm checks each row of the matrix to identify a special position. A position is considered special if there is exactly one '1' in its row, and the corresponding column has no other '1' in other rows.
+
+Time Complexity:
+- O(M * N), where 'M' is the number of rows and 'N' is the number of columns in the matrix. The algorithm iterates through each element once.
+
+Space Complexity:
+- O(1) as the algorithm uses a constant amount of extra space. The variables 'specials' and 'index' are independent of the input size.
