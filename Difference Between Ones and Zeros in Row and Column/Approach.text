@@ -1,0 +1,14 @@
+Approach:
+1. Initialize two arrays, 'rowOnes' and 'colOnes,' to store the count of ones in each row and each column, respectively.
+2. Iterate through each element in the 2D grid and update the 'rowOnes' and 'colOnes' arrays by counting the ones in each row and each column.
+3. Iterate through each element in the grid again and update its value based on the formula: `2 * (rowOnes[i] + colOnes[j]) - grid.length - grid[0].length`.
+4. Return the modified grid.
+
+Explanation:
+The algorithm counts the number of ones in each row and each column of the 2D grid using the 'rowOnes' and 'colOnes' arrays. It then updates each element in the grid based on the provided formula, which calculates the difference between twice the sum of ones in its row and column and the sum of the grid dimensions. The result represents the difference between the count of ones and zeros in the corresponding row and column.
+
+Time Complexity:
+- O(M * N), where 'M' is the number of rows and 'N' is the number of columns in the grid. The algorithm iterates through each element twice.
+
+Space Complexity:
+- O(M + N), where 'M' is the number of rows and 'N' is the number of columns in the grid. The algorithm uses two arrays, 'rowOnes' and 'colOnes,' to store the counts.
