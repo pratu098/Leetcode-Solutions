@@ -1,0 +1,14 @@
+Approach:
+1. Initialize a HashSet 'cities' to store the starting cities of the paths.
+2. Iterate through each path in the list of paths and add the starting city to the 'cities' set.
+3. Iterate through each path again and check the destination city. If the destination city is not present in the 'cities' set, it is the destination city, so return it.
+4. If no destination city is found, return an empty string.
+
+Explanation:
+The algorithm identifies the destination city by comparing the starting and destination cities in the list of paths. It first collects all starting cities in the 'cities' set and then iterates through the paths to find the destination city that is not present in the set.
+
+Time Complexity:
+- O(N), where 'N' is the total number of paths in the input list. The algorithm iterates through the paths twice, once to collect starting cities and once to find the destination city.
+
+Space Complexity:
+- O(N), where 'N' is the total number of paths in the input list. The algorithm uses a HashSet ('cities') to store starting cities.
