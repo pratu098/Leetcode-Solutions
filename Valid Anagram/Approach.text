@@ -1,0 +1,16 @@
+Approach:
+1. Check if the lengths of strings 's' and 't' are different. If they are, return false as they cannot be anagrams.
+2. Initialize an array 'map' of size 26 to represent the frequency of each lowercase letter in the alphabet.
+3. Iterate through each character in string 's' and increment the corresponding index in the 'map' array.
+4. Iterate through each character in string 't' and decrement the corresponding index in the 'map' array.
+5. Check if all elements in the 'map' array are zero. If any element is non-zero, return false.
+6. If the loop completes without returning false, return true, indicating that 's' and 't' are anagrams.
+
+Explanation:
+The algorithm uses an array to count the frequency of each lowercase letter in both strings 's' and 't'. After updating the frequencies, it checks if all frequencies are zero, ensuring that both strings have the same characters with the same frequencies.
+
+Time Complexity:
+- O(N), where 'N' is the length of the input strings 's' and 't'. The algorithm iterates through both strings once.
+
+Space Complexity:
+- O(1) as the 'map' array has a constant size (26) independent of the input size.
