@@ -1,0 +1,35 @@
+Approach:
+
+1. Class Structure:
+   - Define a `Pair` class with attributes `foodName` and `rating`. Implement the `Comparable` interface to compare pairs based on their ratings and food names.
+  
+2. Maps and Arrays:
+   - Use several maps and arrays to store information about foods, cuisines, ratings, and their relationships.
+   - Initialize a `foodRatingsArray` to store pairs of food names and ratings.
+   - Create a `cuisineToRatingsMap` to map cuisine names to priority queues of pairs.
+   - Use a `foodNameToIndex` map to store the index of each food name in the `foodRatingsArray`.
+   - Use a `foodToCuisine` map to map food names to their corresponding cuisines.
+
+3. Constructor:
+   - In the constructor, populate the maps and arrays with the provided foods, cuisines, and ratings.
+   - For each food, create a `Pair` object and update the maps accordingly.
+
+4. changeRating Method:
+   - Given a food name and a new rating, update the rating of the corresponding `Pair` in the `foodRatingsArray`.
+   - Remove the old `Pair` from the priority queue in the `cuisineToRatingsMap` and insert the updated `Pair`.
+
+5. highestRated Method:
+   - Given a cuisine name, retrieve the priority queue from the `cuisineToRatingsMap`.
+   - Peek at the highest-rated `Pair` in the priority queue and return its food name.
+
+Explanation:
+
+The `FoodRatings` class is designed to handle food ratings for different cuisines. It uses maps and arrays to efficiently store and update information about foods, cuisines, and their ratings. The priority queues in the `cuisineToRatingsMap` allow quick retrieval of the highest-rated food for a given cuisine.
+
+Time Complexity:
+- The time complexity for constructing the object is O(N * log(N)), where N is the number of foods, as we need to insert each food into the priority queue.
+- The time complexity for changing the rating is O(log(N)), where N is the number of foods, as we need to remove and insert elements into the priority queue.
+- The time complexity for finding the highest-rated food is O(1), as we can directly peek into the priority queue.
+
+Space Complexity:
+- The space complexity is O(N), where N is the number of foods, as we store information about each food and cuisine.
