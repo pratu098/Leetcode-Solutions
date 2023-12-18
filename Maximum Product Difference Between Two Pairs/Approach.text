@@ -1,0 +1,23 @@
+Approach:
+
+1. Initialize Variables:
+   - Initialize four variables: `firstBig`, `secondBig`, `firstSmall`, and `secondSmall`. Set `firstBig` and `firstSmall` to initial values.
+   
+2. Iterate Through Numbers:
+   - Iterate through the given array of numbers.
+   - Update `firstSmall` and `secondSmall` if the current number is smaller than `firstSmall` or `secondSmall`.
+   - Update `firstBig` and `secondBig` if the current number is larger than `firstBig` or `secondBig`.
+   
+3. Calculate Result:
+   - Calculate the product difference using the obtained values of `firstBig`, `secondBig`, `firstSmall`, and `secondSmall`.
+   - Return the result.
+
+Explanation:
+
+The solution aims to find the maximum product difference between two pairs of distinct elements in the array. To achieve this, the algorithm maintains four variables to keep track of the two largest and two smallest elements encountered during the iteration. By doing this, it ensures that the algorithm calculates the maximum product difference using the largest and smallest values.
+
+Time Complexity:
+- The algorithm iterates through the array once, so the time complexity is O(N), where N is the length of the input array.
+
+Space Complexity:
+- The algorithm uses a constant amount of space for the variables, resulting in a space complexity of O(1).
