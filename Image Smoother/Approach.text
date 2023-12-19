@@ -1,0 +1,28 @@
+Approach:
+
+1. Initialize Result Matrix:
+   - Initialize a result matrix `res` with the same dimensions as the input image.
+
+2. Iterate Through Image Pixels:
+   - Iterate through each pixel of the input image.
+   - For each pixel, call the `smoothen` function to calculate the smoothed value and assign it to the corresponding position in the result matrix.
+
+3. Calculate Smoothened Value:
+   - The `smoothen` function takes the image, and the current coordinates (`x` and `y`) as parameters.
+   - It calculates the sum of pixel values in the 3x3 neighborhood centered at (`x`, `y`).
+   - The count variable keeps track of the number of valid pixels in the neighborhood.
+   - The smoothened value is then calculated as the sum divided by the count.
+   - Return the smoothened value.
+
+4. Return Result Matrix:
+   - After iterating through all pixels, return the result matrix.
+
+Explanation:
+
+The algorithm aims to perform image smoothing by calculating the average value of each pixel and its 8 neighboring pixels. The `smoothen` function is responsible for calculating the smoothened value for a given pixel.
+
+Time Complexity:
+- The algorithm iterates through each pixel of the input image once, so the time complexity is O(M * N), where M is the number of rows, and N is the number of columns in the input image.
+
+Space Complexity:
+- The algorithm uses a constant amount of extra space (for variables and the result matrix), resulting in a space complexity of O(1).
