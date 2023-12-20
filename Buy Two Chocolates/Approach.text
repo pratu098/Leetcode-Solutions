@@ -1,0 +1,26 @@
+Approach:
+
+1. Initialize Minimum Costs:
+   - Initialize two variables `firstMinCost` and `secondMinCost` to `Integer.MAX_VALUE`.
+
+2. Iterate Through Chocolate Prices:
+   - Iterate through each chocolate price in the `prices` array.
+   - For each price, update the minimum and second minimum costs accordingly.
+
+3. Calculate Leftover Money:
+   - Calculate the leftover money after buying the two cheapest chocolates.
+   - Subtract the sum of `firstMinCost` and `secondMinCost` from the total money.
+
+4. Check if Leftover Money is Non-Negative:
+   - If the leftover money is non-negative, return it.
+   - Otherwise, return the original total money.
+
+Explanation:
+
+The algorithm aims to find the two cheapest chocolates and calculate the leftover money after buying them. It iterates through the chocolate prices, updating the minimum and second minimum costs. The leftover money is then calculated and checked to ensure it is non-negative.
+
+Time Complexity:
+- The algorithm iterates through the chocolate prices once, resulting in a time complexity of O(N), where N is the number of chocolates.
+
+Space Complexity:
+- The algorithm uses a constant amount of extra space (for variables), resulting in a space complexity of O(1).
