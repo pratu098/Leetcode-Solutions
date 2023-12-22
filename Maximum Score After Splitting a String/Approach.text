@@ -1,0 +1,22 @@
+Approach:
+
+1. Initialization:
+   - Initialize `maxScore` to 0, `countZerosLeft` to 0, and `countOnesRight` to the count of '1's in the entire string `s`.
+
+2. Iterative Calculation:
+   - Iterate through the string `s` from left to right (excluding the last character).
+   - Update `countZerosLeft` by incrementing it when encountering '0' and decrementing `countOnesRight` when encountering '1'.
+   - Calculate the current score as the sum of `countZerosLeft` and `countOnesRight`.
+   - Update `maxScore` with the maximum of its current value and the current score.
+
+3. Return Maximum Score:
+   - After iterating through the string, return the final `maxScore`.
+
+Explanation:
+The algorithm calculates the maximum score by iteratively moving a boundary between '0's and '1's from left to right. At each step, it updates the counts of '0's on the left (`countZerosLeft`) and '1's on the right (`countOnesRight`). The current score is the sum of these counts, and the maximum score is updated accordingly.
+
+Time Complexity:
+- The algorithm iterates through the string once, resulting in a time complexity of O(N), where N is the length of the string.
+
+Space Complexity:
+- The algorithm uses a constant amount of extra space (for variables), resulting in a space complexity of O(1).
