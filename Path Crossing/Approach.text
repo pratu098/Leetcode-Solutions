@@ -1,0 +1,27 @@
+Approach:
+
+1. Initialization:
+   - Create a `Map<Character, Pair<Integer, Integer>>` named `moves` to represent the possible moves in each direction ('N', 'S', 'W', 'E').
+   - Create a `Set<Pair<Integer, Integer>>` named `visited` to store the visited coordinates.
+
+2. Iterative Movement:
+   - Initialize `x` and `y` to 0, representing the current position.
+   - Iterate through each character `c` in the given `path`.
+   - Update the current position based on the move represented by `c`.
+   - Create a `Pair<Integer, Integer>` named `pair` to represent the current coordinates (x, y).
+   - Check if the current coordinates are already in the `visited` set.
+     - If yes, return `true` as it indicates a crossing path.
+     - If not, add the current coordinates to the `visited` set.
+
+3. Return Result:
+   - If the iteration completes without finding a crossing path, return `false`.
+
+Explanation:
+
+The algorithm uses a set (`visited`) to keep track of visited coordinates. It iterates through each move in the given `path`, updating the current position based on the move and checking if the new coordinates have already been visited. If a crossing path is found, the algorithm returns `true`; otherwise, it returns `false`.
+
+Time Complexity:
+- The algorithm iterates through each character in the `path`, resulting in a time complexity of O(N), where N is the length of the path.
+
+Space Complexity:
+- The algorithm uses a set (`visited`) to store coordinates, and the maximum size of the set is bounded by the length of the path. Therefore, the space complexity is O(N).
