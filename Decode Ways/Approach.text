@@ -1,0 +1,27 @@
+Approach:
+
+1. Initialization:
+   - Check for corner cases: If the input string is null, empty, or starts with '0', return 0 as there is no valid decoding.
+
+2. Dynamic Programming Array:
+   - Initialize an array `dp` of size `n + 1` to store the number of decodings for substrings of length up to `n`.
+   - Set `dp[0]` and `dp[1]` to 1 since there is one way to decode a string of length 0 or 1.
+
+3. Iterative Decoding:
+   - Iterate from index 2 to `n` (inclusive).
+   - Extract one-digit and two-digit substrings and convert them to integers.
+   - Update `dp[i]` based on the valid decoding options:
+      - If the one-digit substring is not '0', add `dp[i - 1]` to `dp[i]`.
+      - If the two-digit substring is between 10 and 26 (inclusive), add `dp[i - 2]` to `dp[i]`.
+
+4. Return Result:
+   - Return `dp[n]` as the final result, representing the number of ways to decode the entire string.
+
+Explanation:
+The algorithm uses dynamic programming to count the number of ways to decode the given string. It iterates through the string, updating the dynamic programming array based on the valid decoding options for one-digit and two-digit substrings. The final result is stored in `dp[n]`, representing the number of ways to decode the entire string.
+
+Time Complexity:
+- The algorithm iterates through the string once, resulting in a time complexity of O(N), where N is the length of the string.
+
+Space Complexity:
+- The algorithm uses an array of size `n + 1` to store intermediate results, resulting in a space complexity of O(N).
