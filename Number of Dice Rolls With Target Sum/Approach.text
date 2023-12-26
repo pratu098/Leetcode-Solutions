@@ -1,0 +1,25 @@
+Approach:
+
+1. Initialization:
+   - Check for corner cases: If `n` is 0 and `target` is 0, return 1, as there is one way to achieve the target with 0 dice rolls.
+   - Check for invalid cases: If `target` is less than `n` or greater than `n * k`, return 0, as it's impossible to achieve the target.
+
+2. Dynamic Programming Array:
+   - Initialize a 2D array `dp` of size `(n + 1) x (target + 1)` to store the number of ways to achieve each possible sum.
+   - Set `dp[1][i]` to 1 for all valid values of `i` (1 to `k` and less than or equal to `target`), as there is one way to achieve each value with one die roll.
+
+3. Iterative Calculation:
+   - Iterate from `i = 2` to `n` and `j = 1` to `target`.
+   - For each `i` and `j`, calculate `dp[i][j]` by summing up the values from the previous row (`i - 1`) for valid values of the previous sum (`j - x`), where `x` ranges from 1 to `k` and `x < j`.
+
+4. Return Result:
+   - Return `dp[n][target]` as the final result, representing the number of ways to achieve the target sum with `n` dice rolls.
+
+Explanation:
+The algorithm uses dynamic programming to count the number of ways to achieve a target sum with `n` dice rolls. It iterates through the dynamic programming array, updating the counts based on the possible combinations of dice rolls.
+
+Time Complexity:
+- The algorithm iterates through the dynamic programming array once, resulting in a time complexity of O(n * target * k).
+
+Space Complexity:
+- The algorithm uses a 2D array of size `(n + 1) x (target + 1)`, resulting in a space complexity of O(n * target).
