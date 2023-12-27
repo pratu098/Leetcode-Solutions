@@ -1,0 +1,24 @@
+Approach:
+
+1. Initialization:
+   - Convert the `colors` string into a character array `ch`.
+   - Initialize `count` to 0 to store the total cost, and `minTime` to the first element of `neededTime`.
+
+2. Iterative Calculation:
+   - Iterate through the `neededTime` array from index 0 to `neededTime.length - 2`.
+   - For each index `i`, check if the colors at index `i` and `i+1` are the same.
+      - If they are the same, update `count` by adding the minimum value between `minTime` and `neededTime[i+1]`.
+      - Update `minTime` to the maximum value between `minTime` and `neededTime[i+1]`.
+      - If they are different, update `minTime` to `neededTime[i+1]`.
+
+3. Return Result:
+   - Return the final value of `count` as the minimum cost.
+
+Explanation:
+The algorithm iterates through the `neededTime` array, updating the total cost (`count`) based on the colors and their corresponding needed times. It uses the `minTime` variable to keep track of the minimum time needed for consecutive colors. The algorithm calculates the cost by adding the minimum value between `minTime` and the needed time for the next color.
+
+Time Complexity:
+- The algorithm iterates through the `neededTime` array once, resulting in a time complexity of O(n), where n is the length of `neededTime`.
+
+Space Complexity:
+- The algorithm uses constant space, as it only uses a fixed number of variables regardless of the input size. The space complexity is O(1).
