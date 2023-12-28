@@ -1,0 +1,28 @@
+Approach:
+
+1. Initialization:
+   - Initialize `n` as the length of the input string `s`.
+   - Initialize a 2D array `dp` of size `(n+1) x (k+1)` to store the minimum length of the compressed string for each substring and remaining deletion operations.
+   - Set all values in `dp` to a large constant (9999 in this case) to represent initial invalid states.
+   - Set `dp[0][0]` to 0, as there are no characters in an empty substring.
+
+2. Dynamic Programming:
+   - Iterate through the positions in the input string using two loops:
+      - Outer loop (`i`): Represents the end position of the substring.
+      - Inner loop (`j`): Represents the remaining deletion operations.
+   - For each position `(i, j)`, calculate the optimal compressed length by considering all possible substrings ending at position `i` and different deletion scenarios.
+      - For each candidate substring ending at position `l` (where `l` varies from `i` to 1), calculate the count of consecutive characters (`cnt`) and the number of deletions (`del`) needed to make the substring valid.
+      - Update `dp[i][j]` based on the minimum length obtained from the current substring and remaining deletion operations.
+      - If the remaining deletions (`j - del`) are non-negative, update `dp[i][j]` with the optimal length.
+
+3. Result:
+   - Return the value stored in `dp[n][k]`, which represents the minimum length of the compressed string for the entire input string with `k` remaining deletion operations.
+
+Explanation:
+The algorithm uses dynamic programming to calculate the minimum length of the compressed string considering different substrings and deletion scenarios. It iteratively updates the `dp` array based on the optimal choices at each position.
+
+Time Complexity:
+- The algorithm has a time complexity of O(n^2 * k), where n is the length of the input string and k is the maximum number of deletion operations allowed.
+
+Space Complexity:
+- The algorithm uses a 2D array (`dp`) to store intermediate results, resulting in a space complexity of O(n * k).
