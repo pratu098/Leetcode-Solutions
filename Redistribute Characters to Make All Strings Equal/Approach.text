@@ -1,0 +1,22 @@
+Approach:
+
+1. Count Character Frequencies:
+   - Initialize a `HashMap` named `counts` to store the frequency of each character.
+   - Iterate through each word in the input array and update the character counts in the `counts` map.
+
+2. Check for Equal Distribution:
+   - Iterate through the entries of the `counts` map.
+   - For each character, check if its frequency is divisible by the total number of words (`n`) in the input array.
+   - If any character has a frequency that is not divisible by `n`, return `false`.
+
+3. Result:
+   - If all characters have frequencies that are divisible by `n`, return `true` indicating that it is possible to make the lengths of all words equal by rearranging characters.
+
+Explanation:
+The algorithm counts the frequency of each character across all words and checks whether it is possible to distribute the characters equally among the words. It ensures that each character occurs a number of times that is divisible by the total number of words.
+
+Time Complexity:
+- The algorithm has a time complexity of O(C + N), where C is the total number of characters in all words combined, and N is the number of words.
+
+Space Complexity:
+- The algorithm uses a HashMap (`counts`) to store the frequency of characters, resulting in a space complexity of O(C), where C is the total number of characters.
