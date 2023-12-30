@@ -1,0 +1,23 @@
+Approach:
+
+1. Dynamic Programming Table:
+   - Initialize a 2D array `dp` where `dp[i][k]` represents the minimum difficulty to schedule the first `i` jobs in `k` days.
+   - Set initial values in the `dp` array to `Integer.MAX_VALUE / 2` to represent infinity.
+
+2. Base Case:
+   - Set `dp[0][0]` to 0, as there are no jobs to schedule with 0 days.
+
+3. Dynamic Programming Transition:
+   - Iterate over the jobs from `1` to `n`.
+   - For each job, iterate over the days from `1` to `d`.
+   - For each day, find the maximum difficulty among the jobs from the current job (`i`) to the previous jobs (`j`).
+   - Update `dp[i][k]` by taking the minimum of the current value and the value obtained by adding the maximum difficulty to the value of `dp[j][k - 1]` (minimum difficulty for the previous jobs in `k - 1` days).
+
+4. Result:
+   - The result is stored in `dp[n][d]`, representing the minimum difficulty to schedule all jobs in `d` days.
+
+Time Complexity:
+   - The algorithm has a time complexity of O(n * d^2), where `n` is the number of jobs and `d` is the number of days.
+
+Space Complexity:
+   - The space complexity is O(n * d) as the algorithm uses a 2D array (`dp`) of size `n * d`.
