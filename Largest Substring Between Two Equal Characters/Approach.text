@@ -1,0 +1,21 @@
+Approach:
+
+1. Nested Loop:
+   - Use two nested loops to iterate through all pairs of indices (left, right) in the given string.
+   - The outer loop (`left`) iterates from the beginning of the string to the second-to-last character.
+   - The inner loop (`right`) iterates from `left + 1` to the end of the string.
+
+2. Check for Equal Characters:
+   - For each pair of indices (left, right), check if the characters at those indices are equal.
+
+3. Update Maximum Length:
+   - If the characters are equal, update the answer (`ans`) by taking the maximum of its current value and `(right - left - 1)`.
+
+4. Result:
+   - The final answer is stored in the variable `ans`.
+
+Time Complexity:
+   - The time complexity is O(n^2), where `n` is the length of the string. This is because there are two nested loops that iterate through all pairs of indices.
+
+Space Complexity:
+   - The space complexity is O(1) as the algorithm uses only a constant amount of additional space regardless of the input size.
