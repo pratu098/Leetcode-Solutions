@@ -1,0 +1,23 @@
+Approach:
+
+1. Sort Arrays:
+   - Sort the arrays `g` (children's greed factor) and `s` (cookie sizes) in ascending order.
+
+2. Initialize Indices:
+   - Initialize indices `cookieIndex` to the last index of `s` (cookies) and `childIndex` to the last index of `g` (children).
+
+3. Greedy Matching:
+   - Use a greedy approach to match cookies with children.
+   - Iterate while both `cookieIndex` and `childIndex` are greater than or equal to 0.
+   - Check if the size of the cookie at `cookieIndex` is greater than or equal to the greed factor of the child at `childIndex`.
+   - If true, increment `maxNum` (maximum number of content children), and move both indices to the left.
+   - If false, decrement only `childIndex`.
+
+4. Result:
+   - The final result is the value of `maxNum`.
+
+Time Complexity:
+   - The time complexity is O(N log N), where N is the maximum of the lengths of arrays `g` and `s`. The dominant factor is the sorting step.
+
+Space Complexity:
+   - The space complexity is O(1) as the algorithm uses only a constant amount of additional space regardless of the input size.
