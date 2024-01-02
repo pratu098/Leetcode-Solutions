@@ -1,0 +1,28 @@
+Approach:
+
+1. Frequency Count:
+   - Create a `Map` (`um`) to store the frequency count of each element in the input array `v`.
+
+2. Iterate Over Frequencies:
+   - Iterate while the map `um` is not empty.
+   - For each iteration, create a new list `temp` to store the current subarray.
+
+3. Update Frequencies:
+   - Iterate over the entries of the map `um`.
+   - For each entry, add the key (element) to the `temp` list and decrement its corresponding frequency.
+   - If the frequency becomes 0, add the key to a separate list `toErase`.
+
+4. Remove Processed Elements:
+   - After processing all entries, remove the elements in the `toErase` list from the map.
+
+5. Add Subarray to Result:
+   - Add the `temp` list (current subarray) to the result list `ans`.
+
+6. Result:
+   - The final result is the list of lists `ans` representing the matrix.
+
+Time Complexity:
+   - The time complexity is O(N), where N is the length of the input array `v`. The algorithm iterates through the array and processes each element in constant time.
+
+Space Complexity:
+   - The space complexity is O(N) as the algorithm uses additional space to store the frequency counts in the map.
