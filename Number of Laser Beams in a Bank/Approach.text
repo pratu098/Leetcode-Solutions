@@ -1,0 +1,25 @@
+Approach:
+
+1. Initialize Variables:
+   - Initialize variables `solution` to store the final result, `beaconsInPrevRow` to store the count of beacons in the previous row, and `beaconsInCurrentRow` to store the count of beacons in the current row.
+
+2. Iterate Over Rows:
+   - Iterate over each row in the `bank`.
+
+3. Count Beacons in Current Row:
+   - For each row, iterate over its characters and count the number of '1's, i.e., beacons, in the current row (`beaconsInCurrentRow`).
+
+4. Update Solution:
+   - Update the `solution` by adding the product of `beaconsInCurrentRow` and `beaconsInPrevRow` to it.
+
+5. Update Beacons in Previous Row:
+   - Update `beaconsInPrevRow` to the count of beacons in the current row (`beaconsInCurrentRow`) if it is not equal to 0; otherwise, keep it unchanged.
+
+6. Result:
+   - The final result is stored in the variable `solution`.
+
+Time Complexity:
+   - The time complexity is O(N*M), where N is the number of rows and M is the number of characters in each row of the `bank`. The algorithm iterates over each character in the bank.
+
+Space Complexity:
+   - The space complexity is O(1) as the algorithm uses a constant amount of space to store variables and does not rely on additional data structures that scale with the input size.
