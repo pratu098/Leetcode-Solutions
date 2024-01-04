@@ -1,0 +1,31 @@
+Approach:
+
+1. Initialize HashMap:
+   - Create a `HashMap` named `mp` to store the frequency of each element in the `nums` array.
+
+2. Count Frequency:
+   - Iterate through the `nums` array and count the frequency of each element.
+   - Use the `put` method to update the count in the map.
+
+3. Initialize Operation Count:
+   - Initialize a variable `count` to keep track of the minimum operations needed.
+
+4. Iterate through HashMap Entries:
+   - Iterate through the entries in the `mp` HashMap using a for-each loop.
+
+5. Calculate Operations:
+   - For each entry, get the frequency count (`t`) of the current element.
+   - If the frequency is 1, return -1 as it is not possible to make a single element divisible by 3.
+
+6. Calculate Count:
+   - Calculate the number of operations needed to make the frequency divisible by 3.
+   - Count the complete sets of 3 elements (`t / 3`) and increment the count for any remaining elements (`t % 3 != 0`).
+
+7. Return Result:
+   - Return the total count of operations needed.
+
+Time Complexity:
+   - The time complexity is O(N), where N is the length of the `nums` array. The algorithm iterates through the array once.
+
+Space Complexity:
+   - The space complexity is O(U), where U is the number of unique elements in the `nums` array. The algorithm uses a HashMap to store the frequency of each unique element.
