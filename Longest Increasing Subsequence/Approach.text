@@ -1,0 +1,28 @@
+Approach:
+
+1. Initialize Tails Array:
+   - Create an array `tails` of the same length as `nums` to store the tail elements of possible increasing subsequences.
+
+2. Initialize Size:
+   - Initialize a variable `size` to keep track of the length of the longest increasing subsequence.
+
+3. Iterate Through Elements:
+   - Iterate through each element `x` in the `nums` array.
+
+4. Binary Search for Position:
+   - Perform a binary search within the current range (`i` to `j`) to find the position where the current element `x` should be inserted in the `tails` array to maintain an increasing order.
+
+5. Update Tails Array:
+   - Update the `tails` array at the found position with the current element `x`.
+
+6. Update Size:
+   - If the found position is equal to the current size (`i == size`), increment the size, indicating that a new element is added to extend the longest increasing subsequence.
+
+7. Return Result:
+   - After processing all elements, the variable `size` represents the length of the longest increasing subsequence. Return `size` as the result.
+
+Time Complexity:
+   - The time complexity is O(N log N), where N is the length of the `nums` array. The algorithm iterates through each element and performs a binary search operation.
+
+Space Complexity:
+   - The space complexity is O(N), where N is the length of the `nums` array. The algorithm uses an array (`tails`) to store the tail elements of possible increasing subsequences.
