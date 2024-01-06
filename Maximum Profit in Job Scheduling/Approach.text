@@ -1,0 +1,28 @@
+Approach:
+
+1. Create Jobs Array:
+   - Create an array of `Job` objects to represent each job with attributes `endTime`, `startTime`, and `profit`.
+
+2. Sort Jobs Array:
+   - Sort the `jobs` array based on the `endTime` of each job in ascending order.
+
+3. Initialize DP Array:
+   - Initialize an array `dp` to store the maximum profit at each position in the sorted `jobs` array.
+
+4. Iterate Through Jobs:
+   - Iterate through each job in the sorted `jobs` array.
+
+5. Find Latest Non-Conflict Job:
+   - Use binary search (upper bound) to find the index of the latest non-conflicting job with the current job.
+
+6. Update DP Array:
+   - Update the `dp` array at the current position with the maximum value between the profit of the current job plus the profit of the latest non-conflicting job and the profit at the previous position.
+
+7. Return Result:
+   - After processing all jobs, the maximum profit is stored in the last position of the `dp` array. Return the result.
+
+Time Complexity:
+   - The time complexity is O(N log N), where N is the number of jobs. The algorithm involves sorting the jobs array and performing binary search operations.
+
+Space Complexity:
+   - The space complexity is O(N), where N is the number of jobs. The algorithm uses arrays to store the jobs and the dynamic programming array (`dp`).
