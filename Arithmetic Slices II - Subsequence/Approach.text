@@ -1,0 +1,28 @@
+Approach:
+
+1. Create HashMap:
+   - Create a `Map<Integer, List<Integer>>` (`nums2mp`) to store the indices of each number in the input array.
+
+2. Initialize DP Array:
+   - Initialize a 2D array `dp` of size `len x len` where `len` is the length of the input array `nums`. The value `dp[i][j]` will represent the number of arithmetic slices ending at positions `i` and `j`.
+
+3. Iterate Through Pairs:
+   - Iterate through all pairs of indices `(i, j)` where `i > j`.
+
+4. Check Arithmetic Sequence:
+   - For each pair `(i, j)`, calculate the previous number `prev` that would complete the arithmetic sequence. If `prev` is within the valid integer range, look for its indices in the `nums2mp` map.
+
+5. Update DP Array:
+   - For each valid index `k` found in the `nums2mp` map, update the `dp` array, adding the number of arithmetic slices ending at positions `j` and `k` plus 1.
+
+6. Count Total Slices:
+   - Accumulate the count of arithmetic slices for each `(i, j)` pair in the `res` variable.
+
+7. Return Result:
+   - After processing all pairs, the result is stored in the `res` variable. Return the result.
+
+Time Complexity:
+   - The time complexity is O(N^2), where N is the length of the input array `nums`. The algorithm involves iterating through all pairs of indices and checking for arithmetic sequences.
+
+Space Complexity:
+   - The space complexity is O(N^2), where N is the length of the input array `nums`. The algorithm uses a 2D array `dp` to store intermediate results.
