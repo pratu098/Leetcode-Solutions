@@ -1,0 +1,24 @@
+Approach:
+
+1. Recursive Traversal:
+   - Implement a recursive traversal of the binary search tree (BST).
+
+2. Base Case:
+   - If the current node (`root`) is null, return 0.
+
+3. Check Range:
+   - Check if the value of the current node is within the specified range `[low, high]`.
+     - If yes, include the value in the sum and recursively traverse the left and right subtrees.
+     - If no, adjust the traversal based on the value of the current node compared to the range.
+
+4. Return Sum:
+   - Return the sum obtained during the traversal.
+
+Time Complexity:
+   - The time complexity is O(N), where N is the number of nodes in the binary search tree. Each node is visited once.
+
+Space Complexity:
+   - The space complexity is O(H), where H is the height of the binary search tree. The maximum space used is equal to the height of the tree due to the recursive call stack.
+
+Note:
+   - The given approach assumes that the tree is a valid binary search tree (BST). If the input tree is not a valid BST, additional validation checks may be needed.
