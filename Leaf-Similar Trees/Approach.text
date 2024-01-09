@@ -1,0 +1,20 @@
+Approach:
+
+Recursive DFS for Leaf Nodes:
+   - Implement a recursive Depth-First Search (DFS) to traverse the tree and collect values of leaf nodes.
+Leaf Similarity Check:
+   - Obtain the leaf sequences for both trees using the DFS traversal.
+   - Compare the leaf sequences element-wise.
+     - If the sizes are different, return `false`.
+     - If the sizes are the same, check each element.
+       - If any pair of corresponding elements is different, return `false`.
+       - If all pairs are the same, return `true`.
+
+Time Complexity:
+   - The time complexity is O(N), where N is the total number of nodes in both trees. Each node is visited once during the DFS traversal.
+
+Space Complexity:
+   - The space complexity is O(H1 + H2), where H1 and H2 are the heights of the two trees. The space is used for the recursive call stack during DFS. In the worst case, when the trees are skewed, the space complexity is O(N).
+
+Note:
+   - The given approach assumes that the order of leaf nodes in the sequence matters. If the order does not matter, a simpler approach is to collect all leaf values in two separate lists and check if the lists are equal.
