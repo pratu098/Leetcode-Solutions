@@ -1,0 +1,21 @@
+Approach:
+
+1. Adjacency Map Construction:
+   - Construct an adjacency map to represent the tree structure. The keys are the node values, and the corresponding values are sets containing adjacent nodes.
+   - Traverse the tree using a recursive function.
+   - If the current node is not null, add its value to the map and update the adjacency set with its left and right children's values.
+
+2. Breadth-First Search (BFS):
+   - Use BFS to traverse the tree starting from the given starting node.
+   - Maintain a queue and a set to keep track of visited nodes.
+   - Initialize the minute count to 0.
+   - Enqueue the starting node into the queue and mark it as visited.
+   - Perform BFS until the queue is empty:
+     - For each level, dequeue nodes and enqueue their unvisited neighbors.
+     - Increment the minute count for each level.
+
+3. Time Complexity:
+   - The time complexity is O(N), where N is the number of nodes in the tree. Both the construction of the adjacency map and the BFS traversal visit each node once.
+
+4. Space Complexity:
+   - The space complexity is O(N) for the adjacency map and O(H) for the BFS queue, where H is the height of the tree. In the worst case, when the tree is skewed, the space complexity is dominated by the adjacency map.
