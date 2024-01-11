@@ -1,0 +1,19 @@
+Approach:
+
+1. Depth-First Search (DFS):
+   - Implement a recursive DFS function that returns an array containing the minimum and maximum values in the subtree rooted at the current node.
+   - Initialize the maximum absolute difference variable `m` to 0.
+   - In each recursive call, compute the minimum and maximum values in the current subtree and update `m` with the maximum absolute difference between the current node's value and the minimum/maximum values in the subtree.
+   - Return the array containing the minimum and maximum values.
+
+2. Main Function:
+   - Start the DFS from the root node, passing the maximum absolute difference variable `m` by reference.
+   - The result of the DFS function will be the minimum and maximum values in the entire tree rooted at the current node.
+   - Update `m` with the maximum absolute difference encountered during the traversal.
+   - Finally, return the maximum absolute difference (`m`).
+
+3. Time Complexity:
+   - The time complexity is O(N), where N is the number of nodes in the tree. Each node is visited once during the DFS traversal.
+
+4. Space Complexity:
+   - The space complexity is O(H), where H is the height of the tree. This is the maximum depth of the recursive call stack.
