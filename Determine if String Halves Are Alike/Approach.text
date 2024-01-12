@@ -1,0 +1,15 @@
+Approach:
+
+1. Vowel Counting:
+   - Create a `Set<Character>` to store the vowels (both lowercase and uppercase).
+   - Initialize a variable `vowelsCount` to keep track of the difference between the counts of vowels in the two halves.
+   - Calculate the index (`midIndex`) where the two halves split.
+   - Iterate through the characters of the first half up to `midIndex` and simultaneously iterate through the corresponding characters in the second half.
+   - For each pair of characters (one from each half), check if the character is a vowel. If it is, increment or decrement the `vowelsCount` accordingly.
+   - After the iteration, if `vowelsCount` is 0, it means the two halves have an equal number of vowels.
+
+2. Time Complexity:
+   - The time complexity is O(N), where N is the length of the input string `s`. The loop iterates through each character once.
+
+3. Space Complexity:
+   - The space complexity is O(1) since the set of vowels has a constant size.
