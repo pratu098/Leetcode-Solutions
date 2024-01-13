@@ -1,0 +1,18 @@
+Approach:
+
+1. Character Counting:
+   - Create two `HashMaps` (`smp` and `tmp`) to store the counts of characters in strings `s` and `t`.
+   - Initialize a variable `cnt` to 0, which will represent the common characters between the two strings.
+   - Iterate through each character in string `s` and update the count in `smp`.
+   - Iterate through each character in string `t` and update the count in `tmp`.
+   - Iterate through the entries in `smp`:
+     - For each character, check if it is present in `tmp`.
+     - If present, calculate the common count by taking the minimum of counts in `smp` and `tmp` for that character.
+     - Increment `cnt` by the common count.
+   - The result is obtained by subtracting `cnt` from the length of string `s`.
+
+2. Time Complexity:
+   - The time complexity is O(N), where N is the length of the input strings `s` and `t`. The algorithm iterates through each character in both strings.
+
+3. Space Complexity:
+   - The space complexity is O(K), where K is the number of distinct characters in the input strings. The space required for the two HashMaps is proportional to the number of distinct characters in the strings.
