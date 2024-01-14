@@ -1,0 +1,15 @@
+Approach:
+
+1. Frequency Counting:
+   - Initialize two arrays `freq1` and `freq2` of size 26 to store the frequency counts of characters in the input strings `word1` and `word2`.
+   - Iterate through each character in `word1` and update the corresponding frequency in `freq1`.
+   - Iterate through each character in `word2` and update the corresponding frequency in `freq2`.
+   - Check if both strings have the same set of characters by comparing their frequency arrays. If any character is present in one string but not in the other, return false.
+   - Sort the frequency arrays `freq1` and `freq2`.
+   - Check if the sorted frequency arrays are equal. If they are equal, return true; otherwise, return false.
+
+2. Time Complexity:
+   - The time complexity is O(N), where N is the length of the input strings `word1` and `word2`. The algorithm iterates through each character in both strings.
+
+3. Space Complexity:
+   - The space complexity is O(1) because the size of the arrays `freq1` and `freq2` is fixed at 26, representing the lowercase English alphabet.
