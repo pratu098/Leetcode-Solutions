@@ -1,0 +1,16 @@
+Approach:
+
+1. Counting Losses:
+   - Initialize an array `losses` of size 100001 to store the number of losses for each player.
+   - Iterate through each match in the `matches` array and update the `losses` array based on the match results.
+     - If the winning player has no previous losses (`losses[win] == 0`), set `losses[win]` to -1.
+     - If the losing player had a previous loss (`losses[loss] == -1`), set `losses[loss]` to 1. Otherwise, increment `losses[loss]`.
+   - Create two lists, `zeroLoss` and `oneLoss`, to store the players with zero losses and one loss, respectively.
+   - Iterate through the `losses` array and categorize players into `zeroLoss` and `oneLoss` based on their number of losses.
+   - Create a result list containing `zeroLoss` and `oneLoss`.
+
+2. Time Complexity:
+   - The time complexity is O(N), where N is the number of matches. The algorithm iterates through each match and updates the `losses` array.
+
+3. Space Complexity:
+   - The space complexity is O(1) because the size of the `losses` array is fixed at 100001. The space required for `zeroLoss` and `oneLoss` lists is also constant.
