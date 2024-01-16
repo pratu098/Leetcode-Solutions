@@ -1,0 +1,35 @@
+Approach:
+
+1. Data Structures:
+   - Use an `ArrayList<Integer>` to store the elements of the set.
+   - Use a `HashMap<Integer, Integer>` to store the mapping of each element to its index in the `ArrayList`.
+
+2. Operations:
+   - Insert Operation (`insert`):
+     - Check if the element exists in the `HashMap` using `map.containsKey(val)`.
+     - If the element exists, return `false` as it's already in the set.
+     - Otherwise, add the element to the end of the `ArrayList` and update its index in the `HashMap`.
+     - Return `true` to indicate a successful insertion.
+
+   - Remove Operation (`remove`):
+     - Check if the element exists in the `HashMap` using `map.containsKey(val)`.
+     - If the element doesn't exist, return `false` as it's not in the set.
+     - Get the index of the element from the `HashMap`.
+     - Replace the element at the index with the last element of the `ArrayList`.
+     - Update the index of the moved element in the `HashMap`.
+     - Remove the last element from the `ArrayList` and remove the element's entry from the `HashMap`.
+     - Return `true` to indicate a successful removal.
+
+   - Search Operation (`search`):
+     - Check if the element exists in the `HashMap` using `map.containsKey(val)`.
+     - Return `true` if the element is found, and `false` otherwise.
+
+   - Get Random Element (`getRandom`):
+     - Use `Random` to generate a random index within the size of the `ArrayList`.
+     - Return the element at the randomly generated index.
+
+3. Time Complexity:
+   - The average time complexity for insert, remove, and getRandom operations is O(1), as they involve constant-time operations on the `ArrayList` and `HashMap`.
+
+4. Space Complexity:
+   - The space complexity is O(N), where N is the number of elements in the set. This accounts for the space used by the `ArrayList` and `HashMap`.
