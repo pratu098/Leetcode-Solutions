@@ -1,0 +1,26 @@
+Approach:
+
+1. Data Structures:
+   - Use a `HashMap<Integer, Integer>` to store the frequency of each element in the array.
+   - Use a `HashSet<Integer>` to store the occurrences (frequency values) and check for uniqueness.
+
+2. Operations:
+   - Frequency Count (`HashMap`):
+     - Iterate through the array, and for each element:
+       - If the element is already a key in the `HashMap`, increment its corresponding value (frequency).
+       - If the element is not present, add it to the `HashMap` with a frequency of 1.
+
+   - Check for Unique Occurrences (`HashSet`):
+     - Iterate through the entries of the `HashMap`.
+     - For each frequency value:
+       - Check if it can be added to the `HashSet`. If not (i.e., it's already present), set the `flag` to `false`.
+
+   - Return the Result (`flag`):
+     - If the `flag` is `true`, all occurrences are unique, and the function returns `true`.
+     - If the `flag` is `false`, there is at least one non-unique occurrence, and the function returns `false`.
+
+3. Time Complexity:
+   - The time complexity is O(N), where N is the length of the array. This is because we iterate through the array once to build the frequency map and then iterate through the frequency map to check for unique occurrences.
+
+4. Space Complexity:
+   - The space complexity is O(N), where N is the number of distinct elements in the array. This accounts for the space used by the `HashMap` and `HashSet`.
