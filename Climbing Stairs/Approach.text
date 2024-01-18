@@ -1,0 +1,13 @@
+Approach:
+
+1. Dynamic Programming:
+   - Use an array `dp` of size `n + 1` to store the number of distinct ways to climb to each step.
+   - Initialize `dp[0]` and `dp[1]` to 1, as there is one way to climb 0 or 1 step.
+   - Iterate from `i = 2` to `n`, and for each step `i`, calculate the total number of distinct ways to climb to step `i` using the recurrence relation: `dp[i] = dp[i - 1] + dp[i - 2]`.
+   - The final result is stored in `dp[n]`, representing the number of ways to climb to the nth step.
+
+Time Complexity:
+   - The time complexity is O(n), where n is the total number of steps. This is because we iterate through the steps once to calculate the number of ways to climb to each step.
+
+Space Complexity:
+   - The space complexity is O(n), where n is the total number of steps. This is the space used by the `dp` array to store intermediate results.
