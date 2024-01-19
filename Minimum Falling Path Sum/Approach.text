@@ -1,0 +1,16 @@
+Approach:
+
+Dynamic Programming:
+   - Use a 2D array `dp` of size `n x m` to store the minimum falling path sum for each cell in the matrix.
+   - Initialize the first row of `dp` with the values from the first row of the matrix.
+   - Iterate over the rows of the matrix starting from the second row.
+   - For each cell at position `(i, j)`, calculate the minimum falling path sum by considering the values from the above row and adjacent cells.
+   - Update the `dp[i][j]` with the minimum falling path sum for the current cell.
+   - After the iteration, the minimum falling path sum for the last row represents the minimum falling path sum for the entire matrix.
+   - Return the minimum falling path sum for the last row.
+
+Time Complexity:
+   - The time complexity is O(n * m), where n is the number of rows and m is the number of columns in the matrix. This is because we iterate through each cell once.
+
+Space Complexity:
+   - The space complexity is O(n * m), where n is the number of rows and m is the number of columns in the matrix. This is the space used by the `dp` array to store intermediate results.
