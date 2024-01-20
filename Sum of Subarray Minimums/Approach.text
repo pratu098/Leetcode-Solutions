@@ -1,0 +1,17 @@
+Approach:
+
+Monotonic Stack:
+   - Use two arrays `left` and `right` to store the leftmost and rightmost indices of the elements that are smaller than the current element.
+   - Initialize a monotonic increasing stack to keep track of the indices of elements in the array.
+   - Iterate through the array from left to right to fill the `left` array using the monotonic stack.
+   - Iterate through the array from right to left to fill the `right` array using the monotonic stack.
+   - For each element at index `i`, calculate the number of subarrays with `arr[i]` as the minimum element. This is given by `(i - left[i]) * (right[i] - i)`.
+   - Update the answer by adding the contribution of each element to the total sum.
+   - Use modulo operation to prevent integer overflow.
+   - Return the final answer.
+
+Time Complexity:
+   - The time complexity is O(n), where n is the length of the input array. This is because we iterate through the array twice (left to right and right to left) and perform constant-time operations for each element.
+
+Space Complexity:
+   - The space complexity is O(n), where n is the length of the input array. This is the space used to store the `left` and `right` arrays.
