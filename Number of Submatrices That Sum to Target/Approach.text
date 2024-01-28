@@ -1,0 +1,23 @@
+Approach:
+
+1. Prefix Sum along Columns:
+   - Calculate the prefix sum along each column of the matrix.
+   - This can be done in-place by updating each element in a column to be the sum of its value and the value of the previous element in the same column.
+   
+2. Submatrix Sum Target:
+   - Use two pointers `c1` and `c2` to represent the left and right columns of the submatrix.
+   - Iterate through all possible pairs of columns `(c1, c2)`:
+      - Use a `HashMap` to store the prefix sum of each row between columns `c1` and `c2`.
+      - Initialize the `sum` variable to 0.
+      - Iterate through each row `row` of the matrix:
+         - Update the `sum` by adding the difference between the prefix sum at column `c2` and the prefix sum at column `c1-1` (if `c1 > 0`).
+         - Check if there is a subarray with sum `sum - target` in the prefix sum array.
+         - Increment the count by the frequency of `sum - target` in the `HashMap`.
+         - Update the `HashMap` with the current `sum`.
+   - Return the count as the result.
+
+Time Complexity:
+   - The time complexity is O(n^3), where n is the number of columns in the matrix. This is because we have two nested loops for columns and another loop for rows.
+
+Space Complexity:
+   - The space complexity is O(m), where m is the number of rows in the matrix. This is the space required for the `HashMap` to store the prefix sum of each row.
