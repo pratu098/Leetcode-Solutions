@@ -1,0 +1,21 @@
+Approach:
+
+1. Two Stacks:
+   - Use two stacks (`s1` and `s2`) to simulate the queue.
+   - For the `push` operation:
+      - Move all elements from `s1` to `s2`.
+      - Push the new element onto `s1`.
+      - Move all elements from `s2` back to `s1`.
+   - For the `pop` operation:
+      - Pop the top element from `s1`.
+   - For the `peek` operation:
+      - Return the top element of `s1` without popping it.
+   - For the `empty` operation:
+      - Check if `s1` is empty.
+
+Time Complexity
+   - The `push` operation takes O(n) time, where n is the number of elements in the queue at that point.
+   - The `pop`, `peek`, and `empty` operations take O(1) time.
+
+Space Complexity:
+   - The space complexity is O(n), where n is the number of elements in the queue. This is because both stacks may contain all elements of the queue.
