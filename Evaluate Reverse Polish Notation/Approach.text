@@ -1,0 +1,16 @@
+Approach:
+
+Stack for Evaluation:
+   - Use a stack to perform the evaluation of the given Reverse Polish Notation (RPN) expression.
+   - Iterate through each token in the expression.
+   - If the token is an operand, push it onto the stack.
+   - If the token is an operator (`+`, `-`, `*`, `/`), pop the required number of operands from the stack, perform the operation, and push the result back onto the stack.
+   - The final result will be the only element left in the stack.
+
+Time Complexity:
+   - The time complexity is O(n), where n is the number of tokens in the expression.
+   - Each token is processed once.
+
+Space Complexity:
+   - The space complexity is O(n), where n is the number of operands in the expression.
+   - The stack stores the operands during the evaluation.
