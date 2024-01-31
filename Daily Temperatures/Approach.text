@@ -1,0 +1,17 @@
+Approach:
+
+Stack for Monotonic Decreasing Order:
+   - Use a stack to keep track of the indices of the temperatures in decreasing order.
+   - Iterate through the temperatures array from right to left.
+   - For each temperature, pop elements from the stack until a greater temperature is encountered or the stack becomes empty.
+   - Calculate the difference in indices (days) between the current temperature and the temperature at the top of the stack.
+   - Update the result array with the calculated difference.
+   - Push the current index onto the stack.
+
+Time Complexity:
+   - The time complexity is O(n), where n is the number of temperatures.
+   - Each temperature is processed once, and each index is pushed and popped from the stack once.
+
+Space Complexity:
+   - The space complexity is O(n), where n is the number of temperatures.
+   - The stack stores the indices of temperatures in decreasing order, and in the worst case, it could contain all indices.
