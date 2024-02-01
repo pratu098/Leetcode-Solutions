@@ -1,0 +1,15 @@
+Approach:
+
+Sort and Check Triplets:
+   - Sort the input array `nums`.
+   - Initialize an empty 2D array `result` to store triplets.
+   - Iterate through the sorted array, checking triplets at every step.
+   - For each triplet (i, i+1, i+2), if the difference between the third element and the first element is less than or equal to `k`, add the triplet to the result.
+   - If the condition is not satisfied for any triplet, return an empty 2D array.
+   
+Time Complexity:
+   - The time complexity is O(n log n) due to the sorting step.
+   - The iteration through the sorted array is O(n).
+
+Space Complexity:
+   - The space complexity is O(1) for the result array, and the sorting operation may require O(log n) space.
