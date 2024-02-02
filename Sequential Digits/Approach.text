@@ -1,0 +1,14 @@
+Approach:
+
+Sequential Digit Generation:
+   - Initialize an empty list `a` to store sequential digits.
+   - Iterate through digits from 1 to 9 (inclusive).
+   - For each starting digit, generate sequential digits by adding the next digit until reaching 9.
+   - Add each generated number to the list `a` if it is within the given range `[low, high]`.
+   - Sort the list `a` in ascending order.
+
+Time Complexity:
+   - The time complexity is O(1) since the number of iterations is constant (9 iterations).
+
+Space Complexity:
+   - The space complexity is O(1) as no additional data structures are used.
