@@ -1,0 +1,16 @@
+Approach:
+
+Dynamic Programming for Maximum Sum:
+   - Initialize variables `N` to store the length of the array and `K` to store `k + 1`.
+   - Create an array `dp` of size `k + 1` and initialize it with zeros.
+   - Iterate backward through the array starting from the last element.
+   - For each element, find the maximum value in the next `k` elements.
+   - Update the `dp` array with the maximum sum, considering the current element and the maximum value in the next `k` elements.
+   - Return the maximum sum stored in `dp[0]`.
+
+Time Complexity:
+   - The time complexity is O(N * k) where N is the length of the array and k is the given parameter.
+   - The nested loop iterates through each element and considers the next k elements.
+
+Space Complexity:
+   - The space complexity is O(k) since the `dp` array has a constant size.
