@@ -1,0 +1,20 @@
+Approach:
+
+Sliding Window Technique:
+   - Initialize variables `start` and `end` to represent the current window in the string `s`.
+   - Initialize an array `map` to store the frequency of each character in the string `t`.
+   - Initialize `count` to the length of string `t`.
+   - Initialize `minLen` to `Integer.MAX_VALUE` and `startIndex` to 0.
+   - Iterate through each character in string `t` and update the frequency in the `map` array.
+   - Use two pointers (`start` and `end`) to represent the current window in string `s`.
+   - While moving the `end` pointer, decrease the frequency in the `map` array. If the frequency becomes zero, decrement `count`.
+   - While `count` becomes zero, update the minimum length and the starting index of the window. Move the `start` pointer to shrink the window.
+   - Continue this process until the end of string `s`.
+   - Return the minimum length substring starting from `startIndex` with length `minLen`. If no valid substring is found, return an empty string.
+
+Time Complexity:
+   - The time complexity is O(N), where N is the length of string `s`.
+   - Both the `start` and `end` pointers traverse the string once.
+
+Space Complexity:
+   - The space complexity is O(128) = O(1) since the `map` array has a constant size (128 ASCII characters).
