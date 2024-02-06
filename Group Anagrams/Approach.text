@@ -1,0 +1,18 @@
+Approach:
+
+Map to Group Anagrams:
+   - Create a `HashMap` (`anagramGroups`) to store groups of anagrams. The key for each group is a sorted version of the characters in the word.
+   - Iterate through each word in the input array (`words`).
+   - Sort the characters in the word to create a key.
+   - If the key is not in the map, add a new entry with the word as a list.
+   - If the key is already present, append the word to the existing list.
+
+Time Complexity:
+   - The time complexity is O(N * K * log(K)), where N is the number of words and K is the maximum length of a word.
+     - N: Iterate through each word in the array.
+     - K * log(K): Sorting the characters in each word.
+
+Space Complexity:
+   - The space complexity is O(N * K), where N is the number of words and K is the maximum length of a word.
+     - N: Each word is stored in the map.
+     - K: The sorted version of each word's characters.
