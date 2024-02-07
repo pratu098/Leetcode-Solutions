@@ -1,0 +1,21 @@
+Approach:
+
+Frequency Map:
+   - Create a `HashMap` (`hm`) to store the frequency of each character in the string.
+   - Iterate through each character in the string (`s`) and update the frequency in the map.
+
+Priority Queue for Sorting by Frequency:
+   - Create a `PriorityQueue` (`pq`) to sort the entries of the map based on the frequency in descending order.
+   - Use a custom comparator to compare entries based on their values (frequency).
+
+Build Result String:
+   - Poll entries from the priority queue and append characters to the result string based on their frequency.
+
+Time Complexity:
+   - The time complexity is O(N * log(N)), where N is the length of the input string.
+     - N: Iterate through each character in the string.
+     - log(N): Polling each entry from the priority queue.
+
+Space Complexity:
+   - The space complexity is O(U), where U is the number of unique characters in the input string.
+     - U: The number of entries in the frequency map.
